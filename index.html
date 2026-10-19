@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarterPak - Vehicle & Parts Exchange Platform</title>
-    <!-- Updated Stable Design Engine CDN to bypass dynamic parsing blocks -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Stable Web Design Engine -->
+    <script src="https://jsdelivr.net"></script>
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -16,7 +16,7 @@
             <a href="#" class="text-xl font-bold flex items-center gap-2">
                 <i class="fa-solid fa-arrows-rotate text-yellow-400"></i> BarterPak <span class="text-xs bg-yellow-400 text-blue-900 px-2 py-0.5 rounded font-bold">Exchange Parts</span>
             </a>
-            <button onclick="toggleModal('adModal')" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-4 py-2 rounded-lg text-sm shadow transition duration-200">
+            <button onclick="toggleModal('adModal')" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-4 py-2 rounded-lg text-sm shadow transition duration-200 cursor-pointer">
                 <i class="fa-solid fa-plus-circle"></i> Post Exchange Parts
             </button>
         </div>
@@ -30,7 +30,7 @@
             <div class="bg-white p-2 rounded-xl shadow-lg max-w-2xl mx-auto flex items-center text-gray-700">
                 <i class="fa-solid fa-search px-3 text-gray-400"></i>
                 <input type="text" placeholder="Search engines, vehicles, or appliances..." class="w-full py-2 focus:outline-none text-sm md:text-base">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg text-sm">Search</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg text-sm cursor-pointer">Search</button>
             </div>
         </div>
     </header>
@@ -72,7 +72,7 @@
                     <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
                         <span><i class="fa-solid fa-location-dot"></i> Rawalpindi, PK</span>
                         <div class="flex gap-2">
-                            <button onclick="sharePost('Honda Civic 1.8L Petrol Engine', 'Toyota 1C or 2C Diesel Engine')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition">
+                            <button onclick="sharePost('Honda Civic 1.8L Petrol Engine', 'Toyota 1C or 2C Diesel Engine')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition cursor-pointer">
                                 <i class="fa-solid fa-share-nodes text-base"></i>
                             </button>
                             <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
@@ -111,7 +111,7 @@
                     <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
                         <span><i class="fa-solid fa-location-dot"></i> Lahore, PK</span>
                         <div class="flex gap-2">
-                            <button onclick="sharePost('Suzuki Mehran 2012', 'Suzuki Alto (2019 or above)')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition">
+                            <button onclick="sharePost('Suzuki Mehran 2012', 'Suzuki Alto (2019 or above)')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition cursor-pointer">
                                 <i class="fa-solid fa-share-nodes text-base"></i>
                             </button>
                             <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
@@ -130,7 +130,7 @@
         <div class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
             <div class="bg-blue-700 text-white px-6 py-4 flex justify-between items-center">
                 <h3 class="text-lg font-bold"><i class="fa-solid fa-pen-to-square"></i> Create Exchange Parts Deal</h3>
-                <button onclick="toggleModal('adModal')" class="text-white hover:text-gray-200 text-xl font-bold">&times;</button>
+                <button onclick="toggleModal('adModal')" class="text-white hover:text-gray-200 text-xl font-bold cursor-pointer">&times;</button>
             </div>
             
             <form id="exchangeForm" onsubmit="handleFormSubmit(event)" class="p-6 overflow-y-auto space-y-4">
@@ -139,4 +139,3 @@
                     <select id="category" class="w-full border border-gray-300 p-2.5 rounded-lg text-sm bg-gray-50 focus:ring-2 focus:ring-blue-500" required>
                         <option value="Engine/Component Swap">Engine Swap (Petrol / Diesel / Hybrid)</option>
                         <option value="Complete Vehicle Exchange">Complete Car / Bike Exchange</option>
-                        <option value="Home Appliances">Home Appliances Exchange</option>
