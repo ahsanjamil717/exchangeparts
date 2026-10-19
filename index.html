@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarterPak - Vehicle & Parts Exchange Platform</title>
-    <!-- Tailwind CSS for modern mobile-first styling -->
-    <script src="https://tailwindcss.com"></script>
+    <!-- Updated Stable Design Engine CDN to bypass dynamic parsing blocks -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -72,8 +72,7 @@
                     <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
                         <span><i class="fa-solid fa-location-dot"></i> Rawalpindi, PK</span>
                         <div class="flex gap-2">
-                            <!-- Share Button Component -->
-                            <button onclick="sharePost('Honda Civic 1.8L Petrol Engine', 'Toyota 1C or 2C Diesel Engine')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition" title="Share with Friends">
+                            <button onclick="sharePost('Honda Civic 1.8L Petrol Engine', 'Toyota 1C or 2C Diesel Engine')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition">
                                 <i class="fa-solid fa-share-nodes text-base"></i>
                             </button>
                             <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
@@ -112,8 +111,7 @@
                     <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
                         <span><i class="fa-solid fa-location-dot"></i> Lahore, PK</span>
                         <div class="flex gap-2">
-                            <!-- Share Button Component -->
-                            <button onclick="sharePost('Suzuki Mehran 2012', 'Suzuki Alto (2019 or above)')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition" title="Share with Friends">
+                            <button onclick="sharePost('Suzuki Mehran 2012', 'Suzuki Alto (2019 or above)')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition">
                                 <i class="fa-solid fa-share-nodes text-base"></i>
                             </button>
                             <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
@@ -140,3 +138,5 @@
                     <label class="block text-sm font-bold mb-1">Select Exchange Category</label>
                     <select id="category" class="w-full border border-gray-300 p-2.5 rounded-lg text-sm bg-gray-50 focus:ring-2 focus:ring-blue-500" required>
                         <option value="Engine/Component Swap">Engine Swap (Petrol / Diesel / Hybrid)</option>
+                        <option value="Complete Vehicle Exchange">Complete Car / Bike Exchange</option>
+                        <option value="Home Appliances">Home Appliances Exchange</option>
