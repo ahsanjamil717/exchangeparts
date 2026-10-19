@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarterPak - Vehicle & Parts Exchange Platform</title>
+    <!-- Tailwind CSS for modern mobile-first styling -->
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-arrows-rotate text-yellow-400"></i> BarterPak <span class="text-xs bg-yellow-400 text-blue-900 px-2 py-0.5 rounded font-bold">Exchange Parts</span>
+            </a>
+            <button onclick="toggleModal('adModal')" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-4 py-2 rounded-lg text-sm shadow transition duration-200">
+                <i class="fa-solid fa-plus-circle"></i> Post Exchange Parts
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Pakistan's #1 Dedicated Exchange Parts Marketplace</h1>
+            <p class="text-md md:text-xl text-blue-100 mb-6">Swap Cars, Petrol/Diesel Engines, or Home Appliances directly without selling!</p>
+            <div class="bg-white p-2 rounded-xl shadow-lg max-w-2xl mx-auto flex items-center text-gray-700">
+                <i class="fa-solid fa-search px-3 text-gray-400"></i>
+                <input type="text" placeholder="Search engines, vehicles, or appliances..." class="w-full py-2 focus:outline-none text-sm md:text-base">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg text-sm">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-800">
+            <span class="w-2 h-6 bg-blue-600 rounded-full"></span> Recent Exchange Parts Offers
+        </h2>
+
+        <!-- Listings Feed -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Item 1: Engine Swap -->
+            <div class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden hover:shadow-lg transition flex flex-col justify-between">
+                <div>
+                    <div class="bg-blue-50 px-4 py-2 border-b border-gray-100 flex justify-between items-center">
+                        <span class="text-xs font-bold uppercase bg-blue-100 text-blue-800 px-2 py-1 rounded">Engine Swap</span>
+                        <span class="text-xs text-gray-500"><i class="fa-regular fa-clock"></i> 2 hours ago</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-red-600 uppercase tracking-wide">User Has:</div>
+                            <div class="text-lg font-bold text-gray-900">Honda Civic 1.8L Petrol Engine (2018)</div>
+                        </div>
+                        <div class="flex items-center justify-center my-2 text-blue-500 font-bold gap-2 bg-gray-50 py-1.5 rounded-lg border border-dashed border-gray-200">
+                            <i class="fa-solid fa-repeat"></i> WANT TO EXCHANGE WITH
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-green-600 uppercase tracking-wide">User Wants:</div>
+                            <div class="text-lg font-bold text-gray-900">Toyota 1C or 2C Diesel Engine</div>
+                        </div>
+                        <div class="text-sm bg-yellow-50 text-yellow-800 p-2 rounded border border-yellow-100 mb-4 font-medium">
+                            <i class="fa-solid fa-wallet"></i> Boot Money: Will pay cash difference
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 pb-5">
+                    <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
+                        <span><i class="fa-solid fa-location-dot"></i> Rawalpindi, PK</span>
+                        <div class="flex gap-2">
+                            <!-- Share Button Component -->
+                            <button onclick="sharePost('Honda Civic 1.8L Petrol Engine', 'Toyota 1C or 2C Diesel Engine')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition" title="Share with Friends">
+                                <i class="fa-solid fa-share-nodes text-base"></i>
+                            </button>
+                            <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
+                                <i class="fa-brands fa-whatsapp"></i> Chat Dealer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Car Swap -->
+            <div class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden hover:shadow-lg transition flex flex-col justify-between">
+                <div>
+                    <div class="bg-blue-50 px-4 py-2 border-b border-gray-100 flex justify-between items-center">
+                        <span class="text-xs font-bold uppercase bg-purple-100 text-purple-800 px-2 py-1 rounded">Vehicle</span>
+                        <span class="text-xs text-gray-500"><i class="fa-regular fa-clock"></i> 5 hours ago</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-red-600 uppercase tracking-wide">User Has:</div>
+                            <div class="text-lg font-bold text-gray-900">Suzuki Mehran 2012 (Total Genuine)</div>
+                        </div>
+                        <div class="flex items-center justify-center my-2 text-blue-500 font-bold gap-2 bg-gray-50 py-1.5 rounded-lg border border-dashed border-gray-200">
+                            <i class="fa-solid fa-repeat"></i> WANT TO EXCHANGE WITH
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-green-600 uppercase tracking-wide">User Wants:</div>
+                            <div class="text-lg font-bold text-gray-900">Suzuki Alto (2019 or above)</div>
+                        </div>
+                        <div class="text-sm bg-yellow-50 text-yellow-800 p-2 rounded border border-yellow-100 mb-4 font-medium">
+                            <i class="fa-solid fa-wallet"></i> Boot Money: Will pay extra cash difference
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 pb-5">
+                    <div class="flex justify-between items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
+                        <span><i class="fa-solid fa-location-dot"></i> Lahore, PK</span>
+                        <div class="flex gap-2">
+                            <!-- Share Button Component -->
+                            <button onclick="sharePost('Suzuki Mehran 2012', 'Suzuki Alto (2019 or above)')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold p-2 rounded-lg flex items-center justify-center transition" title="Share with Friends">
+                                <i class="fa-solid fa-share-nodes text-base"></i>
+                            </button>
+                            <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition">
+                                <i class="fa-brands fa-whatsapp"></i> Chat Dealer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Form: Post Exchange Parts Ad -->
+    <div id="adModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
+            <div class="bg-blue-700 text-white px-6 py-4 flex justify-between items-center">
+                <h3 class="text-lg font-bold"><i class="fa-solid fa-pen-to-square"></i> Create Exchange Parts Deal</h3>
+                <button onclick="toggleModal('adModal')" class="text-white hover:text-gray-200 text-xl font-bold">&times;</button>
+            </div>
+            
+            <form id="exchangeForm" onsubmit="handleFormSubmit(event)" class="p-6 overflow-y-auto space-y-4">
+                <div>
+                    <label class="block text-sm font-bold mb-1">Select Exchange Category</label>
+                    <select id="category" class="w-full border border-gray-300 p-2.5 rounded-lg text-sm bg-gray-50 focus:ring-2 focus:ring-blue-500" required>
+                        <option value="Engine/Component Swap">Engine Swap (Petrol / Diesel / Hybrid)</option>
